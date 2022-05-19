@@ -1,43 +1,42 @@
 #include <stdio.h>
 
 int main(){
-    char ch; // to determine which operation to perform + - * / etc
+    char operator; // to determine which operation to perform + - * / etc
     float num1, num2, result = 0;
-    printf("\n Please enter the operation to perform : ");
-    scanf("%c", &ch);
-        // if ( ch != '*','-','+','/')
-        // {
-        //     printf("Invalid input!!");
-        // }
+    printf("\n Please enter the operation to perform (+ , - , * , / ): ");
+    scanf("%c", &operator);
 
 
-    printf("\n Please enter the numbers : ");
-    scanf("%f%f",&num1,&num2);
+    printf("\n Enter the two numbers one by one:\n ");
+    scanf("%1f%1f",&num1, &num2);
 
 
-    switch(ch){
+    switch(operator){
         case '+':
-            result = num1 + num2;
+            printf("%.1f + %.1f = %.1f\n", num1, num2, (num1+num2));
+            //result = num1 + num2;
             break;
 
-
         case '-':
-            result = num1 - num2;
+        printf("%.1f + %.1f = %.1f\n", num1, num2, (num1+num2));
+            //result = num1 - num2;
             break;
 
         case '*':
-            result = num1 * num2;
+            //result = num1 * num2;
+            printf("%.1f + %.1f = %.1f\n", num1, num2, (num1+num2));
             break;
 
         case '/':
-            result = num1 / num2;
+        printf("%.1f + %.1f = %.1f\n", num1, num2, (num1+num2));
+            //result = num1 / num2;
             break;
 
         default:
             printf("Invalid option!!!");
             break;
     }
-    printf(" The result = %.2f\n", result);
+   // printf(" The result = %.2f\n", result);
 
     return 0;
 }
